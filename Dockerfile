@@ -4,8 +4,8 @@ ENV TZ=Asia/Kolkata
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # clone the repo and change workdir
-RUN git clone https://github.com/rootuttu/git-root-ub.git /root/TeamUltroid/
-WORKDIR /root/TeamUltroid/
+RUN git clone https://github.com/rootuttu/git-root-ub.git /root/git-root-ub/
+WORKDIR /root/git-root-ub/
 
 # install main requirements.
 COPY requirements.txt /deploy/
