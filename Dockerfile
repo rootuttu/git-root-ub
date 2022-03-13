@@ -7,6 +7,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN git clone https://github.com/rootuttu/git-root-ub.git /root/git-root-ub/
 WORKDIR /root/git-root-ub/
 # install addons requirements
+RUN pip3 install safety
 RUN wget -O /deploy/addons.txt https://git.io/JWdOk
 RUN pip3 install --no-cache-dir -r /deploy/addons.txt
 
