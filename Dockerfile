@@ -2,6 +2,7 @@ FROM ghcr.io/jamesdarke/grootgalaxy:latest
 # set timezone
 ENV TZ=Asia/Kolkata
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN /usr/local/bin/python -m pip install --upgrade pip
 
 # clone the repo and change workdir
 RUN git clone https://github.com/rootuttu/git-root-ub.git /root/git-root-ub/
